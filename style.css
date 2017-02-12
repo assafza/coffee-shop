@@ -1,0 +1,97 @@
+ body {
+  
+ background-color: black;
+}
+.inner{
+	height: 60px;
+}
+h1{
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  vertical-align: central;
+  
+}
+p{
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  
+}
+h2{
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+ vertical-align: top;
+  text-transform: uppercase;
+}
+ .icon{ 
+  height: 55px;
+  float: right;
+ 
+}
+
+.myButton {
+	background-color:#ffe74a;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:'Roboto Condensed', sans-serif;
+	font-size:17px;
+	padding:10px 21px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffe100;
+	position: center;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+.myButton:hover {
+	background-color:#ff9d00;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.innerSelect{
+display:table-cell;
+    vertical-align:middle;
+}
+.select-style {
+    border: 1px solid #ffe74a;
+    width: 200px;
+    height: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+	font-size:14px;
+	text-transform: uppercase;
+    border-radius: 3px;
+    overflow: hidden;
+    background: black;
+    color: white;
+    v
+
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+
+
+

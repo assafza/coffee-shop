@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
+
   <title></title>
 </head>
 <body>
+<br><br>
+<div style = "display:inline; width:60%; float:left;">
+		<div class ="inner" style = "display:inline; width:15%; float:left;"><img class = "icon" src="yellow-coffee-512.png">></div>
+		<div class ="inner" style = "display:inline; width:85%; float:left;"><h1> Welcome to your favorite Coffee Shop</h1></div>
+		<br><br><br><br><br><br><br>
+		<div class ="inner"  style = "display:inline; width:5%; float:left;"></div>
+		<div class ="inner"  style = "display:inline; width:65%; float:left;"><h2> PLEASE SELECT YOUR COFFEE FROM THE MENU </h2></div>
+		
+			<div class ="inner"  style="display:inline; width:25%; float:left;">
+				<select class="select-style" id="drink">
+					<option value="latte">latte</option>
+					<option value="americano">americano</option>
+					<option value="doubleShot">doubleShot</option>
+					<option value="frenchPress">frenchPress</option>
+				</select>
+			</div>
+			<div class ="inner"  style="display:inline; width:40%; float:left;"></div>
+			<div class ="inner" style = "display:inline; width:40%; float:left;"> 
+				<button class="myButton" onclick="myFunction() "> MAKE MY COFFEE</button>
+			</div>
+			<div class ="innerSelect"  style="display:inline; width:20%; float:left;"></div>
+			<div class ="inner" style = "display:inline; width:100%; float:left;">
+				<p id = "orderStatus"></p>
+			</div>
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class ="inner" style = "display:inline; width:100%; float:left;"> 
+				<button class="myButton" onclick="sales()"><img src="money-dollar-circle-512.png" height="40px" alt=""> DAILY REPORTS </button>
+			</div>
 
+			<div class ="inner" style = "display:inline; width:100%; float:left;"> <h2 id="salesReports"></h2></div>
+			<div class ="inner" style = "display:inline; width:20%; float:left;">
+				<p id=salesTitle>  </p>
+			</div>
+			<div class ="inner" style = "display:inline; width:80%; float:left;">
+				<p id= "expensesTitle">  </p>
+			</div>
+			<div class ="inner" style = "display:inline; width:20%; float:left;">
+				<p id = "soldDrink"></p>
+			</div>
+			<div class ="inner" style = "display:inline; width:80%; float:left;">
+				<p id = "money"></p>
+			</div>	
+			
+</div>
+			
+<div style = "display:inline; width:40%; float:left;">
+<img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-color: white;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%);cursor: zoom-in;" src="giphy.gif" width="455" height="632">
+</div>
 </body>
+<script type="text/javascript">
+	function myFunction(){
+		var curDrink = document.getElementById("drink").value;
+		var status = coffeeShop.makeDrink(curDrink);
+		document.getElementById("orderStatus").innerHTML = status;
+	}
+
+	function sales(){
+		document.getElementById("salesReports").innerHTML ="------------SALES REPORTS-------------";
+		document.getElementById("salesTitle").innerHTML = "SALES";
+		document.getElementById("expensesTitle").innerHTML = "CASH_IN";
+		
+		var sales = coffeeShop.sales();
+		var income = coffeeShop.income();
+	
+		console.log(income);
+		console.log(sales);
+		document.getElementById("soldDrink").innerHTML = sales;
+		document.getElementById("money").innerHTML = income;
+	}
+
+</script>
 </html>
+  
